@@ -15,6 +15,7 @@ BuildRequires:	perl-devel
 # For tests
 BuildRequires:	perl(Test)
 BuildRequires:	perl(Test::More)
+BuildRequires:	perl(ExtUtils::Config)
 BuildArch:	noarch
 
 %description

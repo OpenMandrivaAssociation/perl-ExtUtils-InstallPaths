@@ -10,9 +10,11 @@ Url:		https://metacpan.org/pod/ExtUtils::InstallPaths
 Source:		http://www.cpan.org/modules/by-module/ExtUtils/%{upstream_name}-%{version}.tar.gz
 BuildRequires:	perl(File::Basename)
 BuildRequires:	perl(File::Spec)
-BuildRequires:	perl(Test)
 BuildRequires:	perl(Text::ParseWords)
 BuildRequires:	perl-devel
+# For tests
+BuildRequires:	perl(Test)
+BuildRequires:	perl(Test::More)
 BuildArch:	noarch
 
 %description

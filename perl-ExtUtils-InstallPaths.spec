@@ -1,14 +1,13 @@
 %define upstream_name  	    ExtUtils-InstallPaths
-%define upstream_version 0.009
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
+Version:	0.012
 Release:	1
 Summary:	Build.PL install path logic made easy
 License:	GPL or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
-Source:		http://www.cpan.org/modules/by-module/ExtUtils/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/pod/ExtUtils::InstallPaths
+Source:		http://www.cpan.org/modules/by-module/ExtUtils/%{upstream_name}-%{version}.tar.gz
 BuildRequires:	perl(File::Basename)
 BuildRequires:	perl(File::Spec)
 BuildRequires:	perl(Test)
@@ -20,17 +19,17 @@ BuildArch:	noarch
 Build.PL install path logic made easy.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version} 
+%autosetup -p1 -n %{upstream_name}-%{version} 
+perl Makefile.PL INSTALLDIRS=vendor
 
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor
-make
+%make_build
 
 %check
 make test
 
 %install
-%makeinstall_std
+%make_install
 
 %files 
 %doc Changes

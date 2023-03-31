@@ -2,7 +2,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	0.012
-Release:	1
+Release:	2
 Summary:	Build.PL install path logic made easy
 License:	GPL or Artistic
 Group:		Development/Perl

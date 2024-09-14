@@ -1,7 +1,7 @@
 %define upstream_name  	    ExtUtils-InstallPaths
 
 Name:		perl-%{upstream_name}
-Version:	0.013
+Version:	0.014
 Release:	1
 Summary:	Build.PL install path logic made easy
 License:	GPL or Artistic

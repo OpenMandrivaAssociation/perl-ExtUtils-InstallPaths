@@ -1,7 +1,7 @@
 %define upstream_name  	    ExtUtils-InstallPaths
 
 Name:		perl-%{upstream_name}
-Version:	0.014
+Version:	0.015
 Release:	1
 Summary:	Build.PL install path logic made easy
 License:	GPL or Artistic
@@ -23,7 +23,7 @@ BuildArch:	noarch
 Build.PL install path logic made easy.
 
 %prep
-%autosetup -p1 -n %{upstream_name}-%{version} 
+%autosetup -p1 -n ExtUtils-InstallPaths-0.015 
 perl Makefile.PL INSTALLDIRS=vendor
 
 %build
